@@ -1,0 +1,13 @@
+class Funcionario:
+    def __init__(self, nome, cargo, salario):
+        self.nome = nome
+        self.cargo = cargo
+        self.salario = salario
+
+    def promocao(self, novo_cargo):
+        self.cargo = novo_cargo
+
+func1 = Funcionario("Gabriel", "Supervisor", 2000)
+print(f"Nome: {func1.nome}\nSalario: {func1.salario}\nCargo: {func1.cargo}")
+func1.promocao("Gerente")
+print(f"Nome: {func1.nome}\nSalario: {func1.salario}\nCargo: {func1.cargo}")
