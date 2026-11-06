@@ -1,0 +1,15 @@
+class LivroBiblioteca:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+        self.disponivel = True
+
+    def empresetar(self):
+        self.disponivel = False
+        print(f"{self.titulo} está indisponivel")
+
+livro1=LivroBiblioteca("Diário de um banana","Um Banana")
+
+livro1.empresetar()
+
+print(livro1.disponivel)
