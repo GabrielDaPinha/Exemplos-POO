@@ -1,0 +1,13 @@
+class TV:
+    def ligar(self):
+        return "Ligando a TV..."
+
+class ArCondicionado:
+    def ligar(self):
+        return "Ligando a Ar Condicionado..."
+
+def ativar_aparelho(aparelho):
+    return aparelho.ligar()
+
+ativar_aparelho(TV())
+ativar_aparelho(ArCondicionado())
