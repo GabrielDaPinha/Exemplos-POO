@@ -1,0 +1,22 @@
+class Funcionario:
+    def __init__(self, nome, salario):
+        self.nome = nome
+        self.salario = salario
+
+    def trabalhar(self):
+        return f"O funcionário {self.nome} está trabalhando na empresa."
+
+class Gerente(Funcionario):
+    def __init__(self, nome, salario, senha_sistema):
+        super().__init__(nome, salario)
+        self.senha_sistema = senha_sistema
+
+    def gerenciar(self):
+        return f"O gerente está aprovando os relatórios do sistema."
+
+gerente1 = Gerente('Daniel', 8000, 'dann123')
+
+print(gerente1.trabalhar())
+print(gerente1.gerenciar())
+print(f"Salario: R${gerente1.salario:.2f}")
+print(f"Senha de acesso: {gerente1.senha_sistema}")
