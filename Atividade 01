@@ -1,0 +1,11 @@
+class Email:
+    def __init__(self, remetente, destinatario, assunto):
+        self.remetente = remetente
+        self.destinatario = destinatario
+        self.assunto = assunto
+
+    def enviar(Email):
+        return f"Enviando {Email.assunto} de {Email.remetente} para {Email.destinatario}"
+
+email1 = Email("Gabriel", "Daniel", "meupeidocheiragod")
+print(email1.enviar())
