@@ -1,0 +1,13 @@
+class Smartphone:
+    def __init__(self, marca, modelo, capacidade_bateria):
+        self.marca = marca
+        self.modelo = modelo
+        self.capacidade_bateria = capacidade_bateria
+
+    def carregar(self):
+        self.capacidade_bateria += 60
+
+cll1 = Smartphone("Samsung", "Galaxy Pro", 120)
+print(f"O {cll1.modelo} tem {cll1.capacidade_bateria} minutos de bateria")
+cll1.carregar()
+print(f"O {cll1.modelo} tem {cll1.capacidade_bateria} minutos de bateria após carregar")
