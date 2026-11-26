@@ -1,0 +1,15 @@
+class Eletrodomestico:
+    def __init__(self, voltagem, preco):
+        self.voltagem = voltagem
+        self.preco = preco
+
+class Microondas(Eletrodomestico):
+    def __init__(self, voltagem, preco, potencia_watts):
+        super().__init__(voltagem, preco)
+        self.potencia_watts = potencia_watts
+
+    def funcionar(self):
+        print(f"Microondas ({self.potencia_watts}W, {self.voltagem}V) aquecendo... Preço: R$ {self.preco:.2f}")
+
+micro1 = Microondas(127, 550.00, 1400)
+micro1.funcionar()
