@@ -1,0 +1,16 @@
+class ContaBancaria:
+    def __init__(self, titular, saldo):
+        self.titular = titular
+        self.saldo = saldo
+
+class ContaPoupanca(ContaBancaria):
+    def __init__(self, titular, saldo, taxa_rendimento):
+        super().__init__(titular, saldo)
+        self.taxa_rendimento = taxa_rendimento
+
+    def aplicar_rendimento(self):
+        self.saldo += self.saldo * self.taxa_rendimento
+        print(f"Novo saldo de {self.titular}: R$ {self.saldo:.2f}")
+
+poupanca1 = ContaPoupanca("Gabriel", 1000.00, 0.05)
+poupanca1.aplicar_rendimento()
