@@ -1,0 +1,23 @@
+class Funcionario:
+    def __init__(self, nome, cargo, salario):
+        self.nome = nome
+        self.cargo = cargo
+        self.salario = salario
+
+    def promover(self):
+        self.cargo = "Gerente"
+        self.salario = self.salario * 1.5
+
+daniel = Funcionario("Daniel", "Funcionario", 2000)
+
+print(daniel.nome)
+print(daniel.cargo)
+print(daniel.salario)
+
+daniel.promover()
+
+print("\nDepois da Promoção\n")
+
+print(daniel.nome)
+print(daniel.cargo)
+print(daniel.salario)
