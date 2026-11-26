@@ -1,0 +1,16 @@
+class Usuario:
+    def __init__(self, nome, email):
+        self.nome = nome
+        self.email = email
+
+class Adminitrador(Usuario):
+    def __init__(self, nome, email, nivel_acesso):
+        super().__init__(nome, email)
+        self.nivel_acesso = nivel_acesso
+
+    def mostrar(self):
+        print(f"Admin: {self.nome}\nEmail: {self.email}\nNivel de acesso: {self.nivel_acesso}")
+
+usuario1 = Adminitrador("Daniel", "dann@gmail.com", "Total")
+
+usuario1.mostrar()
