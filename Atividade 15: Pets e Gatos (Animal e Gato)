@@ -1,0 +1,18 @@
+class Animal:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def emitir_som(self):
+        return "Som"
+
+class Gato(Animal):
+    def __init__(self, nome, idade, raca):
+        super().__init__(nome, idade)
+        self.raca = raca
+
+    def emitir_som(self):
+        return "Miau!"
+
+gato1 = Gato("Mingau", 3, "Siamês")
+print(f"{gato1.nome} ({gato1.raca}, {gato1.idade} anos) diz: {gato1.emitir_som()}")
