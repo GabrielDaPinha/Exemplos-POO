@@ -1,0 +1,18 @@
+class Veiculo:
+    def __init__(self, marca, ano):
+        self.marca = marca
+        self.ano = ano
+
+class Caminhao(Veiculo):
+    def __init__(self, marca, ano, capacidade_carga_toneladas):
+        super().__init__(marca, ano)
+        self.capacidade_carga_toneladas = capacidade_carga_toneladas
+
+    def descrever(self):
+        print(
+            f"Caminhão {self.marca} ({self.ano}) - Capacidade: {self.capacidade_carga_toneladas} toneladas"
+        )
+
+
+caminhao1 = Caminhao("Scania", 2022, 28)
+caminhao1.descrever()
