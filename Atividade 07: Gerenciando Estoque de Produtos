@@ -1,0 +1,16 @@
+class Produto:
+    def __init__(self, nome, preco, estoque):
+        self.nome = nome
+        self.preco = preco
+        self.estoque = estoque
+
+    def calcular(self):
+        return self.preco * self.estoque
+
+coca = Produto("Coca",9.99, 100)
+arroz = Produto("Arroz",12, 200)
+controle = Produto("Controle Remoto",20, 20)
+
+print(f" O preço total no estoque de {coca.nome} é {coca.calcular()}")
+print(f" O preço total no estoque de {arroz.nome} é {arroz.calcular()}")
+print(f" O preço total no estoque de {controle.nome} é {controle.calcular()}")
