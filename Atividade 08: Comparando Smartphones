@@ -1,0 +1,18 @@
+class Smartphone:
+    def __init__(self, marca, modelo, capacidade_bateria):
+        self.marca = marca
+        self.modelo = modelo
+        self.capacidade_bateria = capacidade_bateria
+
+    def carregar(self, minutos):
+        self.capacidade_bateria += minutos
+        print(f"O {self.modelo} está carregando por {minutos} minutos...")
+
+cel1 = Smartphone("Samsung", "Galaxy", 600)
+cel2 = Smartphone("Apple", "iPhone", 300)
+
+cel1.carregar(30)
+cel2.carregar(45)
+
+print(f"Marca: {cel1.marca}\n\tModelo: {cel1.modelo}\n\t\tBateria: {cel1.capacidade_bateria}")
+print(f"Marca: {cel2.marca}\n\tModelo: {cel2.modelo}\n\t\tBateria: {cel2.capacidade_bateria}")
