@@ -1,0 +1,19 @@
+class LivroBiblioteca:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+        self.disponivel = True
+
+    def emprestar(self):
+        if self.disponivel:
+            self.disponivel = False
+            print(f"'{self.titulo}' emprestado com sucesso.")
+        else:
+            print(f"'{self.titulo}' já está emprestado e não está disponível.")
+
+
+livro = LivroBiblioteca("Diário de um Banana", "Jeff Kinney")
+
+livro.emprestar()
+livro.emprestar()
+print("Disponível:", livro.disponivel)
