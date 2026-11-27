@@ -1,0 +1,16 @@
+class DocumentoPDF:
+    def imprimir(self):
+        print("Imprimindo documento PDF...")
+
+class DocumentoWord:
+    def imprimir(self):
+        print("Imprimindo documento Word...")
+
+def imprimir_documento(doc):
+    doc.imprimir()
+
+pdf = DocumentoPDF()
+word = DocumentoWord()
+
+imprimir_documento(pdf)
+imprimir_documento(word)
