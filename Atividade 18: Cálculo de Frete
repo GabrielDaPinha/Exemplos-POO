@@ -1,0 +1,15 @@
+class FreteSedex:
+    def calcular_preco(self, peso):
+        return 15.0 + (peso * 4.5)
+
+class FreteTransportadora:
+    def calcular_preco(self, peso):
+        return 10.0 + (peso * 2.5)
+
+def simular_frete(servico_frete, peso):
+    preco = servico_frete.calcular_preco(peso)
+    print(f"{servico_frete.__class__.__name__} para {peso}kg: R$ {preco:.2f}")
+
+peso_encomenda = 10
+simular_frete(FreteSedex(), peso_encomenda)
+simular_frete(FreteTransportadora(), peso_encomenda)
