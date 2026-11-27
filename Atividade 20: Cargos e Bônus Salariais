@@ -1,0 +1,20 @@
+class Cargo:
+    def __init__(self, salario_base):
+        self.salario_base = salario_base
+
+    def calcular_bonus(self):
+        return 0.0
+
+class Desenvolvedor(Cargo):
+    def calcular_bonus(self):
+        return self.salario_base * 0.15  # 15% de bônus
+
+class Gerente(Cargo):
+    def calcular_bonus(self):
+        return self.salario_base * 0.30  # 30% de bônus
+
+dev = Desenvolvedor(4000.0)
+gerente = Gerente(7000.0)
+
+print(f"Bônus Desenvolvedor: R$ {dev.calcular_bonus():.2f}")
+print(f"Bônus Gerente: R$ {gerente.calcular_bonus():.2f}")
