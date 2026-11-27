@@ -1,0 +1,19 @@
+class Notificacao:
+    def enviar(self):
+        print("Enviando notificação...")
+
+class NotificacaoEmail(Notificacao):
+    def enviar(self):
+        print("Enviando notificação por E-mail.")
+
+class NotificacaoSMS(Notificacao):
+    def enviar(self):
+        print("Enviando notificação por SMS.")
+
+notif_base = Notificacao()
+notif_email = NotificacaoEmail()
+notif_sms = NotificacaoSMS()
+
+notif_base.enviar()
+notif_email.enviar()
+notif_sms.enviar()
